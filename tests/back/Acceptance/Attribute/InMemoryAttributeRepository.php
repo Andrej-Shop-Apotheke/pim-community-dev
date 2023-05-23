@@ -203,6 +203,7 @@ class InMemoryAttributeRepository implements AttributeRepositoryInterface, Saver
         if (!$attribute) {
             throw new \RuntimeException('The PIM has no identifier attribute');
         }
+        $attribute->setIsMainIdentifier(true);
 
         return $attribute;
     }
@@ -281,11 +282,6 @@ class InMemoryAttributeRepository implements AttributeRepositoryInterface, Saver
      * {@inheritdoc}
      */
     public function findAvailableAxes($locale)
-    {
-        throw new NotImplementedException(__METHOD__);
-    }
-
-    public function updateMainIdentifier(AttributeInterface $attribute): void
     {
         throw new NotImplementedException(__METHOD__);
     }
