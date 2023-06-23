@@ -12,7 +12,7 @@ Akeneo\Pim\Enrichment\Component\Product\Model\Product:
         enabled:
             type: boolean
             column: is_enabled
-        identifier:
+        identifierz:
             type: string
             length: 255
             unique: true
